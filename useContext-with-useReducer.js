@@ -25,7 +25,7 @@ const cartReducer = (state, action) => {
             const updatedItem = {...existingItem, amount: existingItem.amount + action.item.amount };
   
             updatedItems = [...state.items]; 
-          //   updatedItems = state.items;  // De the nay cung chay ok
+          //   updatedItems = state.items;  // Để thế này cũng ko sai logic nhưng sai vì reactj render ra, sẽ sai khi tăng hay giảm item bằng cách click vào button
           //   updatedItems = [state.items]; // De nhu nay chay qua 1 vai lan click add item la bao loi TypeError: Cannot read properties of undefined (reading 'id')
 
             updatedItems[existingCartItemIndex] = updatedItem;
